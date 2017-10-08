@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+  var numero = "36093580156761";
+
+  var esSegundoDigito = false;
+  var total = 0;
+
+  for (var i = numero.length - 1; i >= 0; i--) {
+    var x = parseInt(numero.charAt(i));
+
+    if (esSegundoDigito) {
+      x = x * 2;
+
+      // if (x >= 10) {
+      if (x > 9) {
+        x -= 9;
+      }
+      // esSegundoDigito = false;
+    } else {
+      // esSegundoDigito = true;
+    }
+
+    total += x;
+
+    esSegundoDigito = !esSegundoDigito;
+  }
+
+  // operador TERNARIO
+  // alert(total % 10 === 0 ? "bien ahi" : "mala");
+  if (total % 10 === 0) {
+    alert("bien ahi");
+  } else {
+    alert("mala");
+  }
+  
+</script>
+</body>
+</html>
